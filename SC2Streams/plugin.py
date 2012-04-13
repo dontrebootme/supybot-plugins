@@ -96,7 +96,7 @@ class SC2Streams(callbacks.Plugin):
         opener = urllib2.build_opener()
         request.add_header('Accept-encoding', 'gzip')
         request.add_header('User-Agent', 'Python-urllib/2.7 \
-             patrick@theoconnor.com https://github.com/Antibody/supybot-starcraft-streams')
+             patrick@theoconnor.com https://github.com/Antibody/supybot-plugins')
         response = opener.open(request)
     
         #Decompress
@@ -125,11 +125,11 @@ class SC2Streams(callbacks.Plugin):
                 race = stream.get("race","-").lower()
 
                 # get color based on race
-                if race.lower() == 'z':
+                if race == 'z':
                     color = "\0036"     # purple
-                elif race.lower() == 't':
+                elif race == 't':
                     color = "\0034"     # red
-                elif race.lower() == 'p':
+                elif race == 'p':
                     color = "\0037"     # yellow
                 else:
                     color = "\00314"    # brown
