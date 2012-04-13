@@ -95,7 +95,8 @@ class SC2Streams(callbacks.Plugin):
         request = urllib2.Request('http://www.teamliquid.net/video/streams/?xml=1&filter=live')
         opener = urllib2.build_opener()
         request.add_header('Accept-encoding', 'gzip')
-        request.add_header('User-Agent', 'Python-urllib/2.7 patrick@theoconnor.com IRC !streams bot')
+        request.add_header('User-Agent', 'Python-urllib/2.7 \
+             patrick@theoconnor.com https://github.com/Antibody/supybot-starcraft-streams')
         response = opener.open(request)
     
         #Decompress
