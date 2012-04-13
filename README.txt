@@ -3,4 +3,5 @@
 This plugin gives the bot the ability to list live streams from TL.net's XML source.
 
 
-Simply download the project and put it in a folder in your plugins folder, and add it to your supyboy conf.
+Create a folder in your plugins folder called SC2Streams, add the contents of this project to that folder.
+Add it to your supyboy conf.
