@@ -148,12 +148,12 @@ class SC2Streams(callbacks.Plugin):
             streams = ([x for x in sorted_streams if sorted_streams.index(x) < numStreams])
 
         # output header
-        header = '{format} {0:7} {1:{maxWidth}} {2}\002'.format("Viewers",\
+        header = '{format}  {0:8} {1:{maxWidth}} {2}\002'.format("Viewers",\
                     "Title", " Link", maxWidth=maxWidth,format="\002\0033")
         irc.sendMsg(ircmsgs.privmsg(ircChannel, header))
         # Output Streams
         for i in range(len(streams)):
-            streamMsg = '{color}#{0:3}{viewers:5}\002{title:{maxWidth}}\002\00314{url}'\
+            streamMsg = '{color}#{0:3}{viewers:6}\002{title:{maxWidth}}\002\00314{url}'\
                         .format(str(i+1), viewers=streams[i][0], title=streams[i][1],
                         url=streams[i][2], maxWidth=maxWidth+1, color=streams[i][4])
             irc.sendMsg(ircmsgs.privmsg(ircChannel, streamMsg))
