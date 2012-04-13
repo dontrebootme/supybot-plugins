@@ -84,7 +84,7 @@ class SC2Streams(callbacks.Plugin):
                         irc.error("The number you entered is too large")
                         return
         elif isRace(arg1):
-                streamRace = arg1
+                streamRace = arg1.lower()
                 if arg2.isdigit():
                         numStreams = int(arg2)
                         if numStreams > 10:
